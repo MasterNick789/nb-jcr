@@ -1,0 +1,13 @@
+#summary Project info
+#labels Featured
+
+= Introduction =
+
+The aim of this project is to provide a simple JCR client for the NetBeans platform.
+
+
+= Features =
+
+Main features:
+  * simple UI for accessing and browsing JCR repositories
+  * search capability

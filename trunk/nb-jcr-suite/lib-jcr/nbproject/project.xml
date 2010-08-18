@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>javax.jcr</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>javax.jcr</package>
+                <package>javax.jcr.lock</package>
+                <package>javax.jcr.nodetype</package>
+                <package>javax.jcr.observation</package>
+                <package>javax.jcr.query</package>
+                <package>javax.jcr.query.qom</package>
+                <package>javax.jcr.retention</package>
+                <package>javax.jcr.security</package>
+                <package>javax.jcr.util</package>
+                <package>javax.jcr.version</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/jcr-2.0.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jcr-2.0.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

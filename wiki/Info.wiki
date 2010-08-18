@@ -10,4 +10,5 @@ The aim of this project is to provide a simple JCR client for the NetBeans platf
 
 Main features:
   * simple UI for accessing and browsing JCR repositories
+    * leveraging NetBeans Nodes API to display JCR nodes
   * search capability

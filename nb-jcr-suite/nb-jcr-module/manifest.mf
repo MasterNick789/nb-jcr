@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.metacortex.nbjcr
+OpenIDE-Module-Layer: org/metacortex/nbjcr/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/metacortex/nbjcr/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

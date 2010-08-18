@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Window">
+            <file name="org-metacortex-nbjcr-ui-JCRExplorerAction.instance">
+                <attr name="component" methodvalue="org.metacortex.nbjcr.ui.JCRExplorerTopComponent.findInstance"/>
+                <attr name="displayName" bundlevalue="org.metacortex.nbjcr.ui.Bundle#CTL_JCRExplorerAction"/>
+                <attr name="iconBase" stringvalue="org/metacortex/nbjcr/resources/database-network_16x16.png"/>
+                <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+            </file>
+            <file name="org-metacortex-nbjcr-ui-JCRTypeAction.instance">
+                <attr name="component" methodvalue="org.metacortex.nbjcr.ui.JCRTypeTopComponent.findInstance"/>
+                <attr name="displayName" bundlevalue="org.metacortex.nbjcr.ui.Bundle#CTL_JCRTypeAction"/>
+                <attr name="iconBase" stringvalue="org/metacortex/nbjcr/resources/gnome-mime-text-xml_16x16.png"/>
+                <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Window">
+            <file name="JCRExplorerAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/Window/org-metacortex-nbjcr-ui-JCRExplorerAction.instance"/>
+            </file>
+            <file name="JCRTypeAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/Window/org-metacortex-nbjcr-ui-JCRTypeAction.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="JCRExplorerTopComponent.settings" url="JCRExplorerTopComponentSettings.xml"/>
+            <file name="JCRTypeTopComponent.settings" url="JCRTypeTopComponentSettings.xml"/>
+        </folder>
+        <folder name="Modes">
+            <folder name="explorer">
+                <file name="JCRExplorerTopComponent.wstcref" url="JCRExplorerTopComponentWstcref.xml"/>
+            </folder>
+            <folder name="properties">
+                <file name="JCRTypeTopComponent.wstcref" url="JCRTypeTopComponentWstcref.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

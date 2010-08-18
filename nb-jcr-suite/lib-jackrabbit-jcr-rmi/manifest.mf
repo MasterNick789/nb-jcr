@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.apache.jackrabbit.rmi
+OpenIDE-Module-Localizing-Bundle: org/apache/jackrabbit/rmi/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

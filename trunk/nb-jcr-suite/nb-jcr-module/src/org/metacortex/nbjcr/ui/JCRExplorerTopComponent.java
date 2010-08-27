@@ -47,43 +47,29 @@ public final class JCRExplorerTopComponent extends TopComponent implements Explo
             setName(NbBundle.getMessage(JCRExplorerTopComponent.class, "CTL_JCRExplorerTopComponent"));
             setToolTipText(NbBundle.getMessage(JCRExplorerTopComponent.class, "HINT_JCRExplorerTopComponent"));
             setIcon(ImageUtilities.loadImage(ICON_PATH, true));
-        try {
-            //
-            //        try {
-            //            Repository repository = new URLRemoteRepository("http://localhost:8080/rmi");
-            //            manager.setRootContext(new SessionNode(repository.login()));
-            //        } catch (RepositoryException ex) {
-            //            Exceptions.printStackTrace(ex);
-            //        } catch (IntrospectionException ex) {
-            //            Exceptions.printStackTrace(ex);
-            //        } catch (MalformedURLException ex) {
-            //            Exceptions.printStackTrace(ex);
-            //        }
-            //
 
-            ClientRepositoryFactory factory = new ClientRepositoryFactory();
-            Repository repository = factory.getRepository("//localhost:9999/repository");
-            Credentials credentials = new SimpleCredentials("root", "gtn".toCharArray());
-            Session session = repository.login(credentials, "portal-system");
+
             
-            manager.setRootContext(new SessionNode(session));
-        } catch (IntrospectionException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (LoginException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (NoSuchWorkspaceException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (RepositoryException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (ClassCastException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (MalformedURLException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (NotBoundException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (RemoteException ex) {
-            Exceptions.printStackTrace(ex);
-        }
+            
+                    try {
+                        Repository repository = new URLRemoteRepository("http://localhost:8080/rmi");
+                        manager.setRootContext(new SessionNode(repository.login()));
+                    } catch (RepositoryException ex) {
+                        Exceptions.printStackTrace(ex);
+                    } catch (IntrospectionException ex) {
+                        Exceptions.printStackTrace(ex);
+                    } catch (MalformedURLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+            
+
+//            ClientRepositoryFactory factory = new ClientRepositoryFactory();
+//            Repository repository = factory.getRepository("//localhost:9999/repository");
+//            Credentials credentials = new SimpleCredentials("root", "gtn".toCharArray());
+//            Session session = repository.login(credentials, "portal-system");
+//
+//            manager.setRootContext(new SessionNode(session));
+
 
     }
 
@@ -96,48 +82,21 @@ public final class JCRExplorerTopComponent extends TopComponent implements Explo
     private void initComponents() {
 
         beanTreeView1 = new org.openide.explorer.view.BeanTreeView();
-        jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
-
-        jToolBar1.setFloatable(false);
-        jToolBar1.setRollover(true);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/metacortex/nbjcr/resources/database-network_16x16.png"))); // NOI18N
-        org.openide.awt.Mnemonics.setLocalizedText(jButton1, org.openide.util.NbBundle.getMessage(JCRExplorerTopComponent.class, "JCRExplorerTopComponent.jButton1.text")); // NOI18N
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(jButton1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
             .addComponent(beanTreeView1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(beanTreeView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(beanTreeView1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openide.explorer.view.BeanTreeView beanTreeView1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
     /**
      * Gets default instance. Do not use directly: reserved for *.settings files only,

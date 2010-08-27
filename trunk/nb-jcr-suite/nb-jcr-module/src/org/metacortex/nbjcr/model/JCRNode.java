@@ -42,45 +42,45 @@ public class JCRNode<T extends Item> extends BeanNode<T> implements Comparable<J
             for (NodeIterator ni = n.getNodes(); ni.hasNext();) {
                 getChildren().add(new Node[]{new JCRNode(ni.nextNode())});
             }
-//            String primaryType = n.getPrimaryNodeType().getName();
-//            setName(getName() + " (" + primaryType + ")");
-//
-//            if (primaryType.equals("nt:file")) {
-//                String mimeType = n.getNode("jcr:content").getProperty("jcr:mimeType").getValue().toString();
-//                if (mimeType.contains("text")) {
-//                    setIconBaseWithExtension(iconFileText);
-//                } else if (mimeType.contains("audio")) {
-//                    setIconBaseWithExtension(iconFileAudio);
-//                } else {
-//                    setIconBaseWithExtension(iconFile);
-//                }
-//            } else if (primaryType.equals("nt:folder")) {
-//                setIconBaseWithExtension(iconFolder);
-//            } else
+            String primaryType = n.getPrimaryNodeType().getName();
+            setName(getName() + " (" + primaryType + ")");
+
+            if (primaryType.equals("nt:file")) {
+                String mimeType = n.getNode("jcr:content").getProperty("jcr:mimeType").getValue().toString();
+                if (mimeType.contains("text")) {
+                    setIconBaseWithExtension(iconFileText);
+                } else if (mimeType.contains("audio")) {
+                    setIconBaseWithExtension(iconFileAudio);
+                } else {
+                    setIconBaseWithExtension(iconFile);
+                }
+            } else if (primaryType.equals("nt:folder")) {
+                setIconBaseWithExtension(iconFolder);
+            } else
             {
                 setIconBaseWithExtension(iconNode);
             }
         } else if (item instanceof javax.jcr.Property) {
-//            javax.jcr.Property p = ((javax.jcr.Property) item);
-//            String val = "[ ";
-//            if (p.isMultiple()) {
-//                for (Value v : p.getValues()) {
-//                    val += v.toString() + " ";
-//                }
-//                val += "]";
-//                setIconBaseWithExtension(iconPropMulti);
-//            } else
-//            {
-//                val = " " + p.getValue().toString();
-//                setIconBaseWithExtension(iconProp);
-//            }
-//            setName(getName() + " = " + val);
+            javax.jcr.Property p = ((javax.jcr.Property) item);
+            String val = "[ ";
+            if (p.isMultiple()) {
+                for (Value v : p.getValues()) {
+                    val += v.toString() + " ";
+                }
+                val += "]";
+                setIconBaseWithExtension(iconPropMulti);
+            } else
+            {
+                val = " " + p.getValue().toString();
+                setIconBaseWithExtension(iconProp);
+            }
+            setName(getName() + " = " + val);
         }
 
 
-//        if (!getJcrName().isEmpty()) {
-//            setName(getName() + " - " + getJcrName());
-//        }
+        if (!getJcrName().isEmpty()) {
+            setName(getName() + " - " + getJcrName());
+        }
     }
 
     public String getJcrName() {
